@@ -54,6 +54,17 @@
         .service-card h3 { font-size: 1.2rem; color: #2c241e; margin-bottom: 12px; }
         .service-card p { font-size: 0.95rem; color: #7a6a5a; }
 
+        /* Who We Help & Partners */
+        .info-split { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        @media (max-width: 768px) { .info-split { grid-template-columns: 1fr; } }
+        
+        .info-box { background: #fff; padding: 40px; border-radius: 12px; border-left: 5px solid #e67e22; box-shadow: 0 5px 20px rgba(0,0,0,0.03); }
+        .info-box h3 { font-size: 1.3rem; color: #e67e22; margin-bottom: 20px; font-family: 'Oswald', sans-serif; letter-spacing: 1px; }
+        .info-box ul { list-style: none; }
+        .info-box ul li { margin-bottom: 12px; color: #5a4a3a; font-size: 0.95rem; position: relative; padding-left: 20px; }
+        .info-box ul li::before { content: "•"; color: #e67e22; font-size: 1.5rem; position: absolute; left: 0; top: -5px; }
+        .info-box p { color: #5a4a3a; font-size: 0.95rem; }
+
         /* Donate Section */
         .donate-section {
             background: linear-gradient(135deg, #fff, #fdfaf7); border: 2px solid #f0e6dc;
@@ -77,6 +88,13 @@
         .contact-box p { color: #c0b0a0; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px; }
         .contact-box a { color: #fff; border-bottom: 1px dashed #e67e22; padding-bottom: 2px; }
         .contact-box a:hover { color: #e67e22; }
+        
+        .action-btn {
+            display: block; text-align: center; background: #e67e22; color: #fff !important;
+            padding: 15px; border-radius: 8px; font-weight: 600; margin-top: 25px;
+            border: none; transition: background 0.3s;
+        }
+        .action-btn:hover { background: #cf6d15; }
 
         footer { text-align: center; padding: 30px; background: #1a1512; color: #8a7a6a; font-size: 0.85rem; }
     </style>
@@ -86,6 +104,7 @@
         <div class="logo"><span class="logo-icon">2B</span><span class="logo-text">2bReady Inc</span></div>
         <nav>
             <a href="#services">Our Services</a>
+            <a href="#about">Who We Help</a>
             <a href="#donate">Donate</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -118,10 +137,29 @@
         </div>
     </section>
 
+    <section class="section" id="about">
+        <h2 class="section-title">COMMUNITY IMPACT</h2>
+        <div class="info-split">
+            <div class="info-box">
+                <h3>Who We Help</h3>
+                <ul>
+                    <li>Families facing sudden financial hardship.</li>
+                    <li>Individuals recovering from unexpected medical emergencies.</li>
+                    <li>Local community members in need of essential supplies.</li>
+                    <li>Those working to transition back to stable housing.</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <h3>Our Partners & Support</h3>
+                <p>We are proud to work alongside community foundations and local partners to ensure aid reaches those who need it most.</p>
+                <p style="margin-top: 20px; font-weight: 600; color: #e67e22;">Proud recipient of the 2024 Denver Foundation Emergency Relief Grant.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="donate-section" id="donate">
         <h2>SUPPORT OUR COMMUNITY</h2>
         <p>Your donation helps a Colorado family get back on their feet. 100% of your contribution goes directly to emergency relief.</p>
-        <!-- 请将 YOUR_PAYPAL_EMAIL_HERE 替换为你真正的 PayPal 商业邮箱 -->
         <a href="https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL_HERE&no_recurring=0&item_name=2bReady+Inc&currency_code=USD" target="_blank" class="paypal-btn">
             <span>💳</span> Donate with PayPal
         </a>
@@ -132,9 +170,11 @@
             <div class="contact-box">
                 <h3>GET IN TOUCH</h3>
                 <p>If you or someone you know needs assistance, please reach out. We are here to help.</p>
-                <p style="margin-top: 20px; color: #fff; font-weight: 600;">Contact Person: John DeClet</p>
+                <p style="margin-top: 20px; color: #fff; font-weight: 600;">Contact Person: Tapita Maeva Awouma Bilounga</p>
                 <p>✉️ <a href="mailto:info@2bready.org">info@2bready.org</a></p>
-                <p>📞 <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                <p>📞 <a href="tel:+12109247769">+1 (210) 924-7769</a></p>
+                
+                <a href="mailto:info@2bready.org?subject=Assistance%20Request" class="action-btn">Request Assistance</a>
             </div>
             
             <div class="contact-box">
