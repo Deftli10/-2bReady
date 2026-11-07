@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2bReady Inc | Emergency Family Support in Colorado</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23e67e22%22/><text x=%2250%22 y=%2258%22 font-family=%22Arial%22 font-size=%2250%22 font-weight=%22bold%22 fill=%22white%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22>2B</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #faf8f5; color: #2c241e; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Navigation */
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 8%; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+            position: sticky; top: 0; z-index: 100; border-bottom: 2px solid #f0e6dc;
+        }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-icon { background: #e67e22; color: #fff; width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 20px; }
+        .logo-text { font-family: 'Oswald', sans-serif; font-size: 1.6rem; font-weight: 700; color: #2c241e; letter-spacing: 1px; }
+        nav a { margin-left: 30px; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; color: #7a6a5a; transition: color 0.3s; }
+        nav a:hover { color: #e67e22; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(44, 36, 30, 0.7), rgba(44, 36, 30, 0.8)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=1600') center/cover;
+            color: #fff; text-align: center; padding: 150px 20px;
+        }
+        .hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; letter-spacing: 2px; margin-bottom: 20px; line-height: 1.1; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; color: #f0e6dc; }
+        .hero-btn {
+            background: #e67e22; color: #fff; padding: 16px 40px;
+            font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+            border-radius: 30px; transition: transform 0.3s, background 0.3s; display: inline-block;
+        }
+        .hero-btn:hover { background: #cf6d15; transform: translateY(-3px); }
+
+        /* Generic Section */
+        .section { max-width: 1100px; margin: 90px auto; padding: 0 20px; }
+        .section-title { font-family: 'Oswald', sans-serif; font-size: 2.2rem; text-align: center; color: #e67e22; margin-bottom: 50px; letter-spacing: 2px; }
+
+        /* Services Grid */
+        .grid-services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card {
+            background: #fff; padding: 40px 30px; border-radius: 12px;
+            border-top: 4px solid #e67e22; text-align: center; box-shadow: 0 10px 30px rgba(230,126,34,0.05);
+            transition: transform 0.3s;
+        }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(230,126,34,0.1); }
+        .service-card span { font-size: 2.5rem; display: block; margin-bottom: 15px; }
+        .service-card h3 { font-size: 1.2rem; color: #2c241e; margin-bottom: 12px; }
+        .service-card p { font-size: 0.95rem; color: #7a6a5a; }
+
+        /* Donate Section */
+        .donate-section {
+            background: linear-gradient(135deg, #fff, #fdfaf7); border: 2px solid #f0e6dc;
+            padding: 60px 20px; border-radius: 16px; text-align: center; max-width: 800px; margin: 0 auto 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+        .donate-section h2 { font-family: 'Oswald', sans-serif; font-size: 2.2rem; color: #e67e22; margin-bottom: 15px; }
+        .donate-section p { color: #7a6a5a; margin-bottom: 30px; font-size: 1.05rem; }
+        .paypal-btn {
+            background-color: #ffc439; color: #003087; font-weight: 700; font-size: 1.1rem;
+            padding: 16px 40px; border-radius: 30px; border: none; cursor: pointer;
+            display: inline-flex; align-items: center; gap: 10px; transition: background 0.3s;
+        }
+        .paypal-btn:hover { background-color: #f0b429; }
+
+        /* Contact Section */
+        .contact-section { background: #2c241e; padding: 80px 20px; }
+        .contact-container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .contact-box { background: #3a3028; padding: 40px; border-radius: 12px; border: 1px solid #4a3e34; }
+        .contact-box h3 { font-family: 'Oswald', sans-serif; color: #e67e22; font-size: 1.5rem; margin-bottom: 20px; }
+        .contact-box p { color: #c0b0a0; margin-bottom: 10px; display: flex; align-items: flex-start; gap: 10px; }
+        .contact-box a { color: #fff; border-bottom: 1px dashed #e67e22; padding-bottom: 2px; }
+        .contact-box a:hover { color: #e67e22; }
+
+        footer { text-align: center; padding: 30px; background: #1a1512; color: #8a7a6a; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><span class="logo-icon">2B</span><span class="logo-text">2bReady Inc</span></div>
+        <nav>
+            <a href="#services">Our Services</a>
+            <a href="#donate">Donate</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>BE READY. BE SUPPORTED.</h1>
+        <p>Providing emergency assistance and family support to individuals in Colorado. When life gets hard, we help you get ready for the next step.</p>
+        <a href="#donate" class="hero-btn">Support Our Mission</a>
+    </section>
+
+    <section class="section" id="services">
+        <h2 class="section-title">HOW WE HELP</h2>
+        <div class="grid-services">
+            <div class="service-card">
+                <span>🍞</span>
+                <h3>Food Assistance</h3>
+                <p>Connecting families with nutritious food resources during times of crisis.</p>
+            </div>
+            <div class="service-card">
+                <span>👕</span>
+                <h3>Essential Clothing</h3>
+                <p>Providing essential clothing items for individuals and families in need.</p>
+            </div>
+            <div class="service-card">
+                <span>💵</span>
+                <h3>Emergency Cash</h3>
+                <p>Short-term financial assistance to help bridge unexpected gaps and emergencies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="donate-section" id="donate">
+        <h2>SUPPORT OUR COMMUNITY</h2>
+        <p>Your donation helps a Colorado family get back on their feet. 100% of your contribution goes directly to emergency relief.</p>
+        <!-- 请将 YOUR_PAYPAL_EMAIL_HERE 替换为你真正的 PayPal 商业邮箱 -->
+        <a href="https://www.paypal.com/donate/?business=YOUR_PAYPAL_EMAIL_HERE&no_recurring=0&item_name=2bReady+Inc&currency_code=USD" target="_blank" class="paypal-btn">
+            <span>💳</span> Donate with PayPal
+        </a>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-box">
+                <h3>GET IN TOUCH</h3>
+                <p>If you or someone you know needs assistance, please reach out. We are here to help.</p>
+                <p style="margin-top: 20px; color: #fff; font-weight: 600;">Contact Person: John DeClet</p>
+                <p>✉️ <a href="mailto:info@2bready.org">info@2bready.org</a></p>
+                <p>📞 <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+            </div>
+            
+            <div class="contact-box">
+                <h3>MAILING ADDRESS</h3>
+                <p>📍 PO Box 352</p>
+                <p>Victor, CO 80860</p>
+                <p style="margin-top: 20px; font-size: 0.85rem; color: #9a8a7a;">* Registered Entity ID: 20211754340</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 2bReady Inc. A 501(c)(3) Nonprofit Organization.</p>
+    </footer>
+</body>
+</html>
